@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login Unidades</title>
+    <link rel="stylesheet" href="estilo.css">
+
+  </head>
+
+	<script type="text/javascript">
+	var attempt = 3;
+
+	function validate() {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+		if ( username == "Lagarto21&tec" && password == "ProWeb@21"){
+			alert("Bienvenido");
+			window.location = "../PG.html";
+			return false;
+			}
+			else {
+				attempt --;
+				alert("Te quedan " + attempt + "_intentos.");
+				if (attempt == 0){
+					alert("Intentos maximos alcanzados, acceso denegado");
+					window.location = "https://th.bing.com/th/id/OIP.lfvlM2h4OexsmYUdUEczzQAAAA?pid=ImgDet&rs=1";
+					return false;
+					}
+			}
+	}
+	</script>
+
+  <body>
+
+    <div class="modal">
+      <div class="contenido">
+        <center><img src="https://www.ciia.mx/wp-content/uploads/2019/08/Stakeholders_138-x-46px_ITTLA_ITTLA.png" alt="" ></center>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="main">
+        <center><h2>INICIAR SESIÓN.</h2></center>
+        <form id="form_id" method="post" name="myform">
+          <center><label>USUARIO :</label></center>
+          <center><input type="text" placeholder="Ingrese usuario"  name="usernames" id="username" autofocus /></center><br><br>
+          <center><label>CONTRASEÑA :</label></center>
+          <center><input type="password" placeholder="Ingrese contraseña"  name="passwords" id="password"></center><br><br>
+          <center><input type="button" value="INGRESAR" id="submit" onclick="validate()"/></center><br>
+          <script src="Login.js"></script>
+        </form>
+        <center><a href="../Contraseña.html"><h6>¿Olvidaste tú contraseña?</h6></a></center>
+      </div>
+    </div>
+
+  </body>
+</html>

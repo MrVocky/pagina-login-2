@@ -1,0 +1,48 @@
+body{
+  text-align: center;
+  font-family: arial, helvetica;
+  margin: 0;
+}
+.modal {
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 235, 0, 1);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+   display: flex;
+
+   animation: modal 1s 0s;
+   animation-duration: 1s;
+
+   visibility: hidden;
+   opacity: 0;
+
+}
+
+.contenido{
+  margin: auto;
+  width: 40%;
+  height: 40%;
+
+}
+
+@keyframes modal {
+  100%{
+    visibility: visible;
+    opacity: 1000;
+  }
+
+}
+#lagarto{
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+#submit{
+  WIDTH: 100px;
+  HEIGHT: 48px;
+  size: 32px;
+  border-radius: 80px;
+}
